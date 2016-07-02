@@ -20,6 +20,12 @@ clean:
 test:
 	$(VENV_DIR)/bin/$(PYTHON) -m unittest discover
 
+travis-install:
+	pip install -r requirements.txt
+
+travis-test:
+	python -m unittest discover
+
 $(VENV_DIR):
 	virtualenv $(VENV_DIR)
 	if [ -a $(REQUIREMENTS) ] ; \
