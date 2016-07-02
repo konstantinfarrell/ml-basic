@@ -51,5 +51,4 @@ if __name__ == '__main__':
     softmax = softmax(scores)
     one_hot = one_hot_encode(softmax)
     entropy = cross_entropy(softmax, one_hot)
-    print(entropy)
 
