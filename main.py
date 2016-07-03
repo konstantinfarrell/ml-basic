@@ -1,7 +1,3 @@
-import os
-import time
-import math
-from multiprocessing import Process, Pool
 
 
 def linear_classifier(data, weight, bias):
