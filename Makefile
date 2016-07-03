@@ -21,7 +21,7 @@ test:
 	$(VENV_DIR)/bin/$(PYTHON) -m unittest discover
 
 travis-install:
-	pip install -r requirements.txt
+	pip install flake8
 
 travis-test:
 	python -m unittest discover
