@@ -4,9 +4,13 @@ from main import *
 
 
 class TestML(TestCase):
-    def setUp(self):
-        self.scores = [1, 1.5, 2, 1.8, 3, 1.15, 1.55, 2]
-        self.avg = sum(self.scores)/len(self.scores)
+    scores = None
+    avg = None
+
+    @classmethod
+    def setUpClass(cls):
+        cls.scores = [1, 1.5, 2, 1.8, 3, 1.15, 1.55, 2]
+        cls.avg = sum(cls.scores)/len(cls.scores)
 
     @staticmethod
     def is_close_to(data, target=1, error=0.01):
